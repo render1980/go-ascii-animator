@@ -1,24 +1,35 @@
 # go-ascii-animator
 
-Yet another tool to animate your Ascii graphics
+Yet another tool to animate your Ascii graphics.
 
 ## Build
 
-`go build main.go`
+`go build go-ascii-animator.go`
 
 ## Run
 
-```
-./main -h
+Use help:
 
-Usage of ./main:
-  -d float
-    	Frame delay (default 0.5)
+```
+./go-ascii-animator -h
+
+Usage of ./go-ascii-animator:
+  -d duration
+    	Delay between frames (milliseconds) (default 500ns)
   -f string
     	File with ASCII graphics to animate
-  -l	If the animation should loop
+  -l	If the animation should loop”
+```
+
+Example:
+
+```
+./go-ascii-animator -d 1000 -f samples/cat.txt -l
 ```
 
 ## ASCII files format
 
-`[yeaa]` at the end of each block
+- `[yaaa]` at the end of each block
+- `[end]` at the end of the file
+
+You can also see examples in samples/ folder.

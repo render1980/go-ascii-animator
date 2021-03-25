@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	var frameDelay = flag.Duration("d", 500, "Frame delay (milliseconds)")
+	var frameDelay = flag.Duration("d", 500, "Delay between frames (milliseconds)")
 	var filename = flag.String("f", "", "File with ASCII graphics to animate")
 	var loop = flag.Bool("l", false, "If the animation should loop")
 
