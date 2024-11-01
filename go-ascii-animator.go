@@ -12,14 +12,14 @@ import (
 )
 
 func main() {
-	var frameDelay = flag.Duration("d", 500, "Delay between frames (milliseconds)")
+	var frameDelay = flag.Int("d", 1000, "Delay between frames (milliseconds)")
 	var filename = flag.String("f", "", "File with ASCII graphics to animate")
 	var loop = flag.Bool("l", false, "If the animation should loop")
 
 	flag.Parse()
 
 	checkFileName(*filename)
-	process(*frameDelay, *filename, *loop)
+	process(time.Duration(*frameDelay), *filename, *loop)
 }
 
 func process(frameDelay time.Duration, file string, loop bool) {
